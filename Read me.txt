@@ -1,0 +1,8 @@
+Fot github repository : 
+https://github.com/RahulWala/Facebook-Feed-page.git
+
+Main index file is "Project.html"
+"first.html" will show profile page
+"second.html" will show feeds shared by me
+"style1.css" is main css file
+"form.js" contain javascript functions.

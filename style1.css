@@ -1,0 +1,283 @@
+/*Contact form Styling*/
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical 
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#foot{
+	border-radius: 4px;
+	margin-top: 5px;
+	padding: 5px 20px;
+	background-image: url('Images/Black.jpg');
+}
+#abt{
+	font-weight: bold;
+	background-image: url('Images/about.jpg');
+	background-attachment: fixed;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	color: white;
+	}
+
+/*Profile page's cover pic*/
+#imgs{
+	height: 600px;
+	width: 100%;
+	background-size: 100% 100%;
+	background-position: fixed;
+	background-image: url('Images/cover.jpg');
+}
+#fedd{
+	margin-bottom: 4px;
+}
+/*Small Mobile devides*/
+@media only screen and (min-width: 320px) and (max-width: 479px){
+	.portfolio{
+		display:none;
+	}
+	#jumbo{
+		text-align: center;
+		font-size: 28px;
+	}
+	.ganesh{
+	height: 15em;
+	width: 15em;
+	position: relative;
+	background-image: url('Images/Ganesh.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: -2%;
+	border-radius: 50%;
+	box-shadow: 5px 10px 5px #888888;
+	margin-left: 4.5em;
+}
+#forms{
+	margin: 0;
+	font-size: 16px;
+}
+#blacks{
+	margin-top: 10%;
+}
+}
+
+/*Mobile*/
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.portfolio{
+	position: relative;
+	height: 600px;
+	background-image: url('Images/portfolio1.jpg');
+	background-size: 100% 100%;
+	background-position: top center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+#forms{
+	margin: 0;
+	font-size: 30px;
+}
+#texts{
+	font-family: courier bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 100px;
+	padding-top: 2.2em;
+	color: white;
+	position: static;
+}
+	#jumbo{
+		display: none;
+	}
+	.ganesh{
+		display: none;
+	}
+	#blacks{
+	margin-top: 10%;
+}
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px)  and (max-width: 991px){
+	.portfolio{
+	position: relative;
+	height: 600px;
+	background-image: url('Images/portfolio1.jpg');
+	background-size: 100% 100%;
+	background-position: top center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 4px;
+}
+#texts{
+	font-family: courier bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 100px;
+	padding-top: 2.2em;
+	color: white;
+	position: static;
+}
+.jumbotron{
+		visibility: hidden;
+}
+#forms{
+	margin: 0;
+	font-size: 50px;
+}
+.ganesh{
+	display: none;
+}
+#abt{
+	margin-top: -162px;
+}
+#blacks{
+	margin-top: 8%;
+}
+}
+
+/*Desktop*/
+@media only screen and (min-width: 992px) and (max-width: 1279px){
+	.portfolio{
+	position: relative;
+	height: 600px;
+	background-image: url('Images/portfolio1.jpg');
+	background-size: 100% 100%;
+	background-position: top center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 4px;
+}
+#forms{
+	margin: 0;
+	font-size: 30px;
+}
+#texts{
+	font-family: courier bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 100px;
+	padding-top: 2.2em;
+	color: white;
+	position: static;
+}
+.jumbotron{
+		visibility: hidden;
+}
+.ganesh{
+	display: none;
+}
+#abt{
+	margin-top: -17.5%;
+}
+#blacks{
+	margin-top: 5%;
+}
+}
+
+/*Huge*/
+@media only screen and (min-width: 1280px) and (max-width: 1440px){
+	.portfolio{
+	position: relative;
+	height: 600px;
+	background-image: url('Images/portfolio1.jpg');
+	background-size: 100% 100%;
+	background-position: top center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 4px;
+}
+#forms{
+	margin: 0;
+	font-size: 30px;
+}
+#texts{
+	font-family: courier bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 100px;
+	padding-top: 2em;
+	color: white;
+	position: static;
+}
+.jumbotron{
+		visibility: hidden;
+}
+.ganesh{
+	display: none;
+}
+#abt{
+	margin-top: -12%;
+}
+#blacks{
+	margin-top: 4%;
+}
+}
+@media only screen and (min-width: 1440px){
+	.portfolio{
+	position: relative;
+	height: 600px;
+	background-image: url('Images/portfolio1.jpg');
+	background-size: 100% 100%;
+	background-position: top center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 4px;
+}
+#forms{
+	margin: 0;
+	font-size: 50px;
+}
+#texts{
+	font-family: courier bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 100px;
+	padding-top: 2em;
+	color: white;
+	position: static;
+}
+.jumbotron{
+		visibility: hidden;
+}
+.ganesh{
+	display: none;
+}
+.name{
+	display: none;
+}
+#abt{
+	margin-top: -5.5%;
+}
+#blacks{
+	margin-top: 2.5%;
+}
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rahul Wala - Feed Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <style type="text/css">
+        body{
+            font-family: courier;
+        }
+        #navigation{
+            opacity: 0.9;
+
+        }
+        #port:hover{
+            background-color: black;
+        }
+        .items ul li:hover{
+            background-color: black;
+        }
+        #part{
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navigation">
+    <div class="container">
+        <div class="navbar-header" id="port">
+            <a href="Project.html" class="navbar-brand">PortFolio</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+             </button>
+        </div>
+        <div class="collapse navbar-collapse items" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Project.html">About</a></li>
+                <li><a href="Project.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+<div class="imgs" id="imgs"></div>
+</div>
+
+<div class="container" id="forms">
+<form>
+    Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id="fn"></span> <br>
+    Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <span id="ag"></span><br>
+    Date of birth &nbsp;: <span id="dob"></span><br>
+    College &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id="clg"></span><br>
+    Home Town &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id="ht"></span>
+</form>
+
+
+<script>
+$(document).ready(function(){
+    var fbToken = "EAACEdEose0cBACuxHE7uweTiTX2hQBBOfbhQY8asiuZBFQNLnZAQiAZCDlovUZBhTF12qyKLE8pS1tvmb5ctFSRXndkUUjDRFP56ASZCD9vxu4aSWPccwfiZC0jpGx1SHMZC840iJxEkc9tnqMfw0vaf02h0aHUxGk5rernqZC6dtgtNZA1qcBswXeYL9sdQgtcun6sIRt4ch8AZDZD";
+
+    function fbInfo(){
+        $.ajax('https://graph.facebook.com/me?fields=name,age_range,hometown,birthday,education&&access_token='+fbToken,{
+            success : function(response){
+                //console.log(response.education[1].school.name);
+                $("#fn").text(response.name);
+                $("#ag").text(response.age_range.min);
+                $("#dob").text(response.birthday);
+                $("#ht").text(response.hometown.name);
+                $("#clg").text(response.education[1].school.name);
+            },error : function(request,errorType,errorMessage){
+                
+                    console.log(request);
+                    alert("Please get a new Token");
+                    console.log(errorType);
+                    
+
+            }
+        });
+    }
+    $("#fn").on('click',fbInfo())
+});
+
+    
+</script>
+
+</body>
+</html>
